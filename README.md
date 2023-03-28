@@ -1,1 +1,2 @@
-# JUST STAY ALIVE
+# STAY ALIVE
+# 活下去
