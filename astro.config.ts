@@ -5,7 +5,7 @@ import svelte from "@astrojs/svelte";
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://staya.live",
+  site: "https://staysa.live",
   compressHTML: true,
   scopedStyleStrategy: "class",
   image: {
