@@ -5,7 +5,8 @@ import svelte from "@astrojs/svelte";
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://staysa.live",
+  site: "https://toolmanp.github.io",
+  base: "/STAY_ALIVE",
   compressHTML: true,
   scopedStyleStrategy: "class",
   image: {
