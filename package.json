@@ -1,0 +1,21 @@
+{
+  "name": "aurora",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@astrojs/markdown-remark": "^3.0.0",
+    "@astrojs/svelte": "^4.0.0",
+    "@fontsource/jetbrains-mono": "^4.5.12",
+    "@fontsource/roboto": "^4.5.8",
+    "astro": "^3.0.7",
+    "open-props": "^1.5.8",
+    "rehype-autolink-headings": "^6.1.1"
+  }
+}

@@ -1,0 +1,24 @@
+---
+const { title, description, ogImage = "" } = Astro.props;
+
+const imageUrl = ogImage ? Astro.url.origin + ogImage : Astro.url.origin + "/cover.jpg";
+---
+
+<head>
+  <meta charset="utf-8" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <meta name="viewport" content="width=device-width" />
+  <meta name="generator" content={Astro.generator} />
+  <title>{title}</title>
+  <meta name="author" content="Your Name" />
+  <meta name="description" content={description} />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content={Astro.url.origin} />
+  <meta property="og:title" content={title} />
+  <meta property="og:description" content={description} />
+  <meta property="og:image" content={imageUrl} />
+  <script is:inline>
+    const storedTheme = localStorage.getItem("theme");
+    document.documentElement.className = storedTheme;
+  </script>
+</head>

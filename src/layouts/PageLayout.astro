@@ -1,0 +1,32 @@
+---
+const { title, description, ogImage } = Astro.props;
+
+import "open-props/style";
+import "../styles/global.css";
+import "@fontsource/roboto";
+import "@fontsource/roboto/700.css";
+import "@fontsource/jetbrains-mono";
+import Head from "../components/Head.astro";
+import Nav from "../components/Nav.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+---
+
+<html lang="en">
+  <Head {title} {description} {ogImage} />
+  <body>
+    <Nav>
+      <slot name="nav" />
+    </Nav>
+    <Header {title}>
+      <slot slot="before-title" name="header-before" />
+      <slot name="header" />
+    </Header>
+    <main>
+      <div class="container">
+        <slot />
+      </div>
+    </main>
+    <Footer />
+  </body>
+</html>

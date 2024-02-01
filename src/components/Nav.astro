@@ -1,0 +1,33 @@
+---
+import ThemeToggle from "../components/ThemeToggle.svelte";
+---
+
+<nav>
+  <div class="container">
+    <a href="/">
+      <img src="/favicon.svg" width="32" height="32" alt="Logo" />
+    </a>
+    <slot />
+    <ThemeToggle client:only="svelte" />
+  </div>
+</nav>
+
+<style>
+  nav {
+    position: sticky;
+    inset-block-start: 0;
+    background-color: var(--secondary-background-color);
+    border-block-end: var(--standard-border);
+  }
+
+  .container {
+    display: flex;
+    align-items: center;
+    block-size: var(--nav-height);
+    position: relative;
+  }
+
+  .container > *:first-child {
+    margin-inline-end: auto;
+  }
+</style>

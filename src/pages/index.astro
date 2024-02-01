@@ -1,0 +1,29 @@
+---
+import PageLayout from "../layouts/PageLayout.astro";
+import * as about from "../../README.md";
+
+---
+
+<PageLayout title="Stay Alive" description="活下去">
+
+  <Fragment set:html={about.compiledContent()}/>
+
+<style>
+  .article-grid {
+    display: grid;
+    gap: var(--size-7);
+  }
+
+  article {
+    border: var(--standard-border);
+  }
+
+  article > header {
+    padding: 0;
+    border-block-end: var(--standard-border);
+  }
+
+  .article-content {
+    padding: var(--size-3);
+  }
+</style>
